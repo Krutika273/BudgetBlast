@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBlast - Beauty Products Comparison</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/auth.css">
+</head>
+<body>
+    <h1 class="brand-title">BudgetBlast</h1>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/search">Search Products</a>
+            <a href="/wishlist">Wishlist</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+        <span id="userGreeting"></span>
+    </nav>
+
+    <!-- Auth Container -->
+    <div class="auth-container" id="authContainer">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group hidden" id="nameGroup">
+                <label for="name">Full Name</label>
+                <input type="text" id="name">
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="toggle-form">
+            <p>New user? <a href="#" id="toggleRegister">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- Search Container (hidden initially) -->
+    <div class="search-container hidden" id="searchContainer">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products..." id="searchInput">
+            <button class="btn" id="searchBtn">Search</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/products.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

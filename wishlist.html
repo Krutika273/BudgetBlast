@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - BudgetBlast</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/products.css">
+    <link rel="stylesheet" href="/static/css/wishlist.css">
+</head>
+<body>
+    <h1 class="brand-title">BudgetBlast</h1>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar active">
+        <div class="nav-links">
+            <a href="/search">Search Products</a>
+            <a href="/wishlist" class="active">Wishlist</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+        <span id="userGreeting"></span>
+    </nav>
+    
+    <!-- Wishlist Container -->
+    <div id="wishlistContainer">
+        <h2 class="section-title">My Wishlist</h2>
+        
+        <div class="wishlist-summary">
+            <h3>Wishlist Summary</h3>
+            <div class="savings-info">
+                <span class="total-savings-label">Total Potential Savings:</span>
+                <span class="total-savings" id="totalSavings">₹0</span>
+                <div class="wishlist-actions">
+                    <button class="btn clear-wishlist" id="clearWishlistBtn">Clear Wishlist</button>
+                    <a href="/search" class="btn">Add More Products</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Grid -->
+        <div class="product-grid" id="wishlistGrid">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/static/js/products.js"></script>
+    <script src="/static/js/wishlist.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>
